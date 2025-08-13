@@ -1,28 +1,27 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(119, 134), "SFML Image Example");
+    sf::VideoMode mode(200, 200);
+    sf::RenderWindow window(mode, "SFML works!");
 
-    // Cargando la imagen desde un archivo
-    sf::Texture texture;
-    if (!texture.loadFromFile("image.png")) {
-        return -1; // Error al cargar la imagen
-    }
-
-    // Creando un sprite para mostrar la imagen
-    sf::Sprite sprite(texture);
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
+    shape.setPosition(0.f, 0.f);
 
     while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
+        sf::Event e; // Declarar el evento
+
+        while (window.pollEvent(e)) { // Pasar el evento por referencia
+            if (e.type == sf::Event::Closed) {
                 window.close();
             }
         }
 
-        window.clear();
-        window.draw(sprite);
+        window.clear(sf::Color::Black);
+        window.draw(shape);
         window.display();
     }
 
