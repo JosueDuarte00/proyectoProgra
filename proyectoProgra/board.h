@@ -1,4 +1,6 @@
 #pragma once
+#ifndef BOARD_H
+#define BOARD_H
 #include "gem.h"
 #include <array>
 
@@ -21,4 +23,5 @@ private:
         int score;
         int moves;
 };
+#endif
 

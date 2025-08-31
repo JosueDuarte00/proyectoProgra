@@ -1,4 +1,6 @@
 #pragma once
+#ifndef GAME_H
+#define GAME_H
 #include <SFML/Graphics.hpp>
 #include "board.h"
 
@@ -33,6 +35,7 @@ private:
     sf::Sprite exitButton;
 
 };
+#endif
 
 
 

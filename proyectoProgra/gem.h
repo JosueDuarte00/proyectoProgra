@@ -1,4 +1,6 @@
 #pragma once
+#ifndef GEM_H
+#define GEM_H
 #include <SFML/Graphics.hpp>
 
 class gem{
@@ -17,4 +19,5 @@ private:
     static bool texturesLoaded;
     
 };
+#endif
 
