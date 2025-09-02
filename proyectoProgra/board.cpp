@@ -1,5 +1,4 @@
 #include "board.h"
-
 #include <cstdlib>
 #include <ctime>
 

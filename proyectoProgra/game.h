@@ -3,6 +3,8 @@
 #define GAME_H
 #include <SFML/Graphics.hpp>
 #include "board.h"
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 
 class game {
 
